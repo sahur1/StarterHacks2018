@@ -12,6 +12,8 @@ nav {
   background-color: white;
 }
 
+
+
 .business-header {
   height: 50vh;
   min-height: 300px;
@@ -31,7 +33,7 @@ nav {
   text-align: left;
   border-radius: 3px;
   color: #1e3756;
-  border: solid 1px grey;
+  border: solid 1px #bfbfbf;
 }
 
 .cat {
@@ -71,7 +73,7 @@ textarea:focus {
   text-align:center;
   font-size:25px;
 }
-.ageFilt img {`
+.ageFilt img {
   display:block;
   width: 120px;
   margin-left:auto;
@@ -93,7 +95,7 @@ ul {
 }
 
 #pdrop td {
-  width: 110px;
+  width: 50px;
 }
 
 .btn2 {
@@ -111,7 +113,7 @@ ul {
   text-align: left;
   border-radius: 3px;
   color: #1e3756;
-  border: solid 1px grey;
+  border: solid 1px #bfbfbf;
 }
 
 .btn1 {

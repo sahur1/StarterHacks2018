@@ -1,0 +1,531 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,600|Roboto|Roboto+Slab|Playfair+Display|Barlow+Condensed:400,600");
+body {
+  padding-top: 100px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+nav {
+  background-color: white;
+}
+
+@import "compass/css3";
+
+$color-bg: #f8f8f8;
+$card-padding: 20px;
+$grid-gutter: 31px;
+
+.card1 {
+
+  position: relative;
+  flex: 1 1 100%;
+  margin: $grid-gutter 0;
+  background: lighten($color-bg, 3%);
+
+}
+
+.set1 {
+  color: #345d7e;
+}
+
+.set2 {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.levi {
+  transition: transform .5s;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 2s cubic-bezier(.165, .84, .44, 1);
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .15);
+    content: '';
+    opacity: 0;
+    z-index: -1;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale3d(1.006, 1.006, 1);
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,600|Roboto|Roboto+Slab|Playfair+Display|Barlow+Condensed:400,600");
+
+.shopsp {
+  padding-top: 50px;
+}
+
+body {
+  padding-top: 20px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+footer {
+  width: 100%;
+  height: 5%;
+  background-color: #f8b195;
+  color: #FFF;
+}
+
+nav {
+  background-color: #f8b195;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+}
+
+h4 {
+  font-family: Raleway, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h5 {
+ font-family: 'Barlow Condensed', sans-serif;
+}
+
+.ft1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 35px;
+}
+
+.ut1 {
+  margin-top: -25px;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border-color: #ccc;
+  color: black;
+}
+
+.btn-primary-outline {
+  background-color: transparent;
+  border-color: #ccc;
+  color: white;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #345d7e;
+}
+
+input, textarea{
+    color: #345d7e;
+}
+
+input.transparent-input{
+   background-color:transparent !important;
+   border:none !important;
+}
+
+h6 {
+  font-size: 13px;
+}
+
+.ft3 {
+  font-size: 25px;
+  color: #345d7e;
+}
+
+.ft4 {
+  color: #345d7e;
+}
+
+.nm1 {
+  width: 45px;
+  height: 45px;
+  margin: 0 auto;
+}
+
+.new {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight:600;
+  color: #345d7e;
+}
+
+.sp1 {
+  padding-top: 20px;
+}
+
+.sp2 {
+  padding-top: 15px;
+}
+
+.cr1 {
+  color: white;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: grey;
+}
+
+.nhover {
+  width: 80px;
+}
+
+.sb {
+  margin-bottom: -7px;
+}
+
+.details {
+  font-size: 15px;
+  font-family: Raleway, sans-serif;
+  font-weight:400;
+  margin-top: -10px;
+}
+
+.details2 {
+  font-size: 13px;
+  font-family: Raleway, sans-serif;
+  font-weight:400;
+  margin-top: -16px;
+}
+
+.spacing12 {
+  padding-bottom: 15px;
+}
+
+.title {
+  padding-top: 13px;
+  padding-bottom: 12px;
+}
+
+
+
+.business-header {
+  height: 50vh;
+  min-height: 300px;
+  background: url("http://placehold.it/1920x400") center center no-repeat scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.box {
+  padding: 10px;
+  height: 200px;
+  width: 269px;
+  float: left;
+  margin: 5px;
+  text-align: left;
+  border-radius: 3px;
+  color: #1e3756;
+  border: solid 1px grey;
+}
+
+.cat {
+  margin-top: -17px;
+}
+
+.card {
+  height: 100%;
+}
+
+button:active,
+button:focus,
+.btn:active,
+.btn:focus,
+.lstbtn:active,
+.lstbtn:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none !important;
+  box-shadow: none;
+}
+.glassPic{
+  width:240px;
+}
+#brandsdrop,
+#pdrop,
+#shapesdrop,
+#stylesdrop{
+  display:none;
+}
+.ageFilt img{
+  width:200px;
+  float:left;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.set23 {
+  padding-left: 13px;
+}
+#pdrop{
+  margin-top:5px;
+}
+#pdrop td{
+  width:110px;
+}
+.btn2{
+  margin-top:5px;
+  margin-bottom:5px;
+  background-color:rgb(245,245,245);
+}
+
+.ageFilt {
+  padding: 10px;
+  height: 180px;
+  width: 269px;
+  float: left;
+  margin: 5px;
+  text-align: left;
+  border-radius: 3px;
+  color: #1e3756;
+  border: solid 1px grey;
+}
+
+.btn1 {
+  font-size: 14px;
+  height: 10px;
+  border: none;
+  text-align: left;
+}
+
+.btndrop {
+  font-size: 18px;
+  height: 50px;
+  text-align: center;
+  border: 0.5px solid #cdcdcd;
+}
+
+.card1 {
+  position: relative;
+  flex: 1 1 100%;
+  margin: 31px 0;
+  background: white;
+}
+
+.levi {
+  transition: transform .5s;
+}
+.levi::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+  content: '';
+  opacity: 0;
+  z-index: -1;
+}
+.levi:hover, .levi:focus {
+  transform: scale3d(1.006, 1.006, 1);
+}
+.levi:hover::after, .levi:focus::after {
+  opacity: 1;
+}
+
+.shopsp {
+  padding-top: 50px;
+}
+
+body {
+  padding-top: 20px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+footer {
+  width: 100%;
+  height: 100%;
+  background-color: #f8b195;
+  color: #FFF;
+}
+
+nav {
+  background-color: #f8b195;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-family: Raleway, sans-serif;
+  font-size: 18px;
+}
+
+h4 {
+  font-family: Raleway, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h5 {
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.ft1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 35px;
+}
+
+.ut1 {
+  margin-top: -25px;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border-color: #ccc;
+  color: black;
+}
+
+.btn-primary-outline {
+  background-color: transparent;
+  border-color: #ccc;
+  color: white;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid white;
+}
+
+input, textarea {
+  color: #FFF;
+}
+
+input.transparent-input {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+h6 {
+  font-size: 13px;
+}
+
+.ft3 {
+  font-size: 25px;
+  color: #345d7e;
+}
+
+.ft4 {
+  color: #345d7e;
+}
+
+.nm1 {
+  width: 45px;
+  height: 45px;
+  margin: 0 auto;
+}
+
+.new {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+}
+
+.sp1 {
+  padding-top: 20px;
+}
+
+.sp2 {
+  padding-top: 15px;
+}
+
+.cr1 {
+  color: white;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: grey;
+}
+
+.nhover {
+  width: 80px;
+}
+
+.navbar-dark {
+  background-color: black;
+}
+
+.sb {
+  margin-bottom: -7px;
+}
+
+.details {
+  font-size: 15px;
+  font-family: Raleway, sans-serif;
+  font-weight: 400;
+  margin-top: -10px;
+}
+
+.details2 {
+  font-size: 13px;
+  font-family: Raleway, sans-serif;
+  font-weight: 400;
+  margin-top: -16px;
+}
+
+.spacing12 {
+  padding-bottom: 15px;
+}
+
+.title {
+  padding-top: 13px;
+  padding-bottom: 12px;
+}

@@ -5,21 +5,20 @@ $card-padding: 20px;
 $grid-gutter: 31px;
 
 .card1 {
-
   position: relative;
   flex: 1 1 100%;
   margin: $grid-gutter 0;
   background: lighten($color-bg, 3%);
-
 }
 
 .set1 {
   color: #345d7e;
+  text-align: left;
 }
 
 .set2 {
-  width: 60%;
   margin: 0 auto;
+  text-align: left;
 }
 
 .levi {
@@ -154,8 +153,8 @@ h6 {
 }
 
 .nm1 {
-  width: 45px;
-  height: 45px;
+  width: 75 px;
+  height: 90px;
   margin: 0 auto;
 }
 

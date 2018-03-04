@@ -1,5 +1,5 @@
 # StarterHacks2018
-# Re**vision**
+## Re*vision*
 
 What happened to the last pair of glasses you had?
 Don't want to spend hundreds of dollars buying new glasses?

@@ -1,12 +1,14 @@
 var mens = false;
 var womens = false;
 var kids = false;
-var bdrop = false;
-var sdrop = false;
-var shdrop = false;
+var bdrop = true;
+var sdrop = true;
+var shdrop = true;
+var pdrop = true;
 var showb = false;
 var shows = false;
 var showsh = false;
+var age = "all";
 
 var brands = ["Derek Cardigan","Kam Dhillon","Love","Michelle Lane","Calvin Klein","Ann Taylor","Other"];
 var brandClass = ["Derek","Kam","Love","Michelle","Calvin","Ann","Other"];
@@ -18,16 +20,15 @@ var j = 0;
 $("#men").click(function(){
   mens = !mens;
   if(mens){
-    $("#men").show();
-    $(".ageFilt").css("margin-left","2%");
-    $(".ageFilt").css("width","100%");
-    $('#women').hide();
-    $('#kids').hide();
+    $("#men").css("opacity","1");
+    $('#women').css("opacity","0.5");
+    $('#kids').css("opacity","0.5");
+    age="men";
   } else{
-    $(".ageFilt").css("margin","0 0.5% 0 0.5%");
-    $(".ageFilt").css("width","32%");
-    $('#women').show();
-    $('#kids').show();
+    $(".ageFilt").css("opacity","1");
+    $('#women').css("opacity","1");
+    $('#kids').css("opacity","1");
+    age="all";
   }
   kids = false;
   womens = false;
@@ -35,16 +36,15 @@ $("#men").click(function(){
 $("#women").click(function(){
   womens = !womens;
   if(womens){
-    $("#women").show();
-    $(".ageFilt").css("margin-left","2%");
-    $(".ageFilt").css("width","96%");
-    $('#men').hide();
-    $('#kids').hide();
+    $("#women").css("opacity","1");
+    $('#men').css("opacity","0.5");
+    $('#kids').css("opacity","0.5");
+    age="women";
   } else{
-    $(".ageFilt").css("margin","0 0.5% 0 0.5%");
-    $(".ageFilt").css("width","32%");
-    $('#men').show();
-    $('#kids').show();
+    $(".ageFilt").css("opacity","1");
+    $('#kids').css("opacity","1");
+    $('#men').css("opacity","1");
+    age="all";
   }
   kids = false;
   mens = false;
@@ -52,16 +52,15 @@ $("#women").click(function(){
 $("#kids").click(function(){
   kids = !kids;
   if(kids){
-    $("#kids").show();
-    $(".ageFilt").css("margin-left","0%");
-    $(".ageFilt").css("width","100%");
-    $('#women').hide();
-    $('#men').hide();
+    $("#kids").css("opacity","1");
+    $('#women').css("opacity","0.5");
+    $('#men').css("opacity","0.5");
+    age="kids";
   } else{
-    $(".ageFilt").css("margin","0 0.5% 0 0.5%");
-    $(".ageFilt").css("width","32%");
-    $('#women').show();
-    $('#men').show();
+    $(".ageFilt").css("opacity","1");
+    $('#women').css("opacity","1");
+    $('#men').css("opacity","1");
+    age = "all";
   }
   mens = false;
   womens = false;
@@ -89,6 +88,12 @@ $(".btndrop").click(function(){
   } else if(this.id == "shapes"){
     $("#shapesdrop").hide();
     shdrop = true;
+  } else if(this.id == "prescription" && pdrop){
+    $("#pdrop").show();
+    pdrop = false;
+  } else if(this.id == "prescription"){
+    $("#pdrop").hide();
+    pdrop = true;
   }
 });
 
@@ -97,11 +102,44 @@ var $btns = $('.btn1').click(function() {
   if (this.id == 'all') {
     $('#parent > div').fadeIn(0);
   } else {
-    var $el = $('.' + this.id).delay(100).fadeIn(0);
-    $('#parent > div').not($el).hide();
+    var el = $('.' + this.id);
+    $('#parent > div').hide();
+    $(el).each(function(index,item){
+      var b = $(item).hasClass(age);
+      console.log(b +" " + el);
+      if(b){
+        $(item).show();
+      }
+    });
   }
 })
-
+var $btns = $('.btn3').click(function() {
+  if (this.id == 'all' || age=="all") {
+    $('#parent > div').fadeIn(0);
+  } else {
+    var el = $('.' + this.id);
+    $('#parent > div').hide();
+    $(el).each(function(index,item){
+      var b = $(item).hasClass(age);
+      console.log(b +" " + el);
+      if(b){
+        $(item).show();
+      }
+    });
+  }
+})
+$("#btndrop").click(function(){
+  var a = this.id;
+  if(a=="brands"){
+    $("#brandsdrop").css("display","block");
+  }else if(a=="styles"){
+    $("#stylesdrop").css("display","block");
+  }else if(a=="prescription"){
+    $("#pdrop").css("display","block");
+  }else if(a=="shapes"){
+    $("#shapessdrop").css("display","block");
+  } 
+});
 $("#brands").click(function(){
   $("brandsdrop").slideDown();
 })
